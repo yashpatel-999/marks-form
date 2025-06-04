@@ -1,9 +1,15 @@
+<div class="container">
 <form (ngSubmit)="submit()" #marksForm="ngForm">
+  <label>Name</label>
   <input type="text" name="name" [(ngModel)]="name" placeholder="Enter your name" required />
+  <label>Subject</label>
   <input type="text" name="subject" [(ngModel)]="subject" placeholder="Enter subject name" required />
+  <label>Test 1 Score</label>
   <input type="number" name="test1" [(ngModel)]="test1" placeholder="Enter Test 1 marks" required />
+  <label>Test 2 Score</label>
   <input type="number" name="test2" [(ngModel)]="test2" placeholder="Enter Test 2 marks" required />
   <button type="submit">Submit</button>
 </form>
 
 <p *ngIf="submitted">Hello {{name}}! Your Score in {{subject}} is {{test1 + test2}}</p>
+</div>
